@@ -1,7 +1,117 @@
+:root {
+  --color-accent: oklch(65% 50% 0); /* Define your accent color */
+}
+
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    
-    font: 100%/1.5 system-ui;
-  }
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 0 1rem;
+  font: 100%/1.5 system-ui;
+  accent-color: var(--color-accent); /* Apply the accent color globally */
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem; /* Adds spacing below the nav */
+  border-bottom: 1px solid oklch(80% 3% 200); /* Subtle bottom border */
+}
+
+nav a {
+  flex: 1;
+  text-align: center; /* Centers the text inside each link */
+  text-decoration: none; /* Removes the underline from links */
+  color: inherit; /* Makes links inherit the text color from the parent */
+  padding: 0.5em; /* Adds spacing inside each link */
+}
+
+nav a.current {
+  font-weight: bold;
+  color: inherit; /* Keeps the same text color */
+  border-bottom: 0.4em solid oklch(80% 3% 200); /* Thick bottom border for current page */
+  padding-bottom: 0.1em; /* Reduces padding to counter the border height */
+}
+
+nav a:hover {
+  background-color: oklch(from var(--color-accent) 95% 5% h); /* Light background with the same hue */
+  border-bottom: 0.4em solid var(--color-accent); /* Accent color for the border */
+  color: var(--color-accent); /* Optional: Change text color to the accent color */
+}
+
+form {
+  display: grid; /* Enable CSS Grid for the form */
+  grid-template-columns: auto 1fr; /* Two columns: labels (auto) and inputs (1fr) */
+  gap: 1em; /* Add spacing between rows and columns */
+  align-items: center; /* Align labels and inputs vertically */
+}
+
+form label {
+  grid-column: 1; /* Place labels in the first column */
+  text-align: right; /* Align label text to the right */
+}
+
+form input,
+form textarea,
+form button {
+  grid-column: 2; /* Place inputs, textareas, and buttons in the second column */
+  padding: 0.5rem; /* Add padding inside the form controls */
+  font: inherit; /* Ensure consistent font with the rest of the page */
+}
+
+form button {
+  grid-column: 1 / -1; /* Make the submit button span the entire row */
+  justify-self: center; /* Center the button horizontally */
+}
+
+.projects {
+  display: grid; /* Enable CSS Grid for the projects container */
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive grid */
+  gap: 1.5em; /* Add spacing between grid items */
+  margin: 2em 0; /* Add spacing above and below the grid */
+}
+
+.projects article {
+  display: grid; /* Make each article a grid container */
+  grid-template-rows: subgrid; /* Use the parent grid's rows */
+  grid-row: span 3; /* Make each article span 3 rows */
+  background-color: #f8f9fa; /* Light background for each article */
+  border: 1px solid #ddd; /* Subtle border around each article */
+  border-radius: 5px; /* Rounded corners */
+  padding: 1em; /* Add padding inside each article */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.projects h2 {
+  font-size: 1.25em; /* Slightly larger font size for headings */
+  margin: 0; /* Remove default margin to avoid excessive spacing */
+}
+
+.projects img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline spacing below images */
+  margin: 0 auto 1em; /* Center the image and add spacing below */
+}
+
+.projects p {
+  font-size: 1em; /* Default font size for paragraphs */
+  color: #555; /* Slightly muted text color */
+}
+
+h1 {
+  font-size: 400%; /* Make the main heading significantly larger */
+  line-height: 1.1; /* Reduce leading for headings */
+  text-wrap: balance; /* Prevent uneven lines */
+}
+
+h2, h3, h4, h5, h6 {
+  line-height: 1.1; /* Reduce leading for all other headings */
+  text-wrap: balance; /* Prevent uneven lines */
+}
+
+h2 {
+  font-size: 1.5em; /* Slightly larger font size for subheadings */
+}
