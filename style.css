@@ -1,5 +1,6 @@
 :root {
   --color-accent: oklch(65% 50% 0); /* Define your accent color */
+  color-scheme: light dark;
 }
 
 body {
@@ -11,13 +12,14 @@ body {
 }
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   justify-content: space-around;
-  background-color: #f8f9fa;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 95%);
   padding: 0.5rem;
   border-radius: 5px;
   margin-bottom: 1rem; /* Adds spacing below the nav */
-  border-bottom: 1px solid oklch(80% 3% 200); /* Subtle bottom border */
+  border-bottom: 1px solid var(--border-color); /* Subtle bottom border */
 }
 
 nav a {
@@ -31,14 +33,25 @@ nav a {
 nav a.current {
   font-weight: bold;
   color: inherit; /* Keeps the same text color */
-  border-bottom: 0.4em solid oklch(80% 3% 200); /* Thick bottom border for current page */
+  border-bottom: 0.4em solid var(--border-color); /* Thick bottom border for current page */
   padding-bottom: 0.1em; /* Reduces padding to counter the border height */
 }
 
 nav a:hover {
-  background-color: oklch(from var(--color-accent) 95% 5% h); /* Light background with the same hue */
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
   border-bottom: 0.4em solid var(--color-accent); /* Accent color for the border */
   color: var(--color-accent); /* Optional: Change text color to the accent color */
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+}
+
+.color-scheme select {
+  font: inherit;
 }
 
 form {
@@ -55,7 +68,8 @@ form label {
 
 form input,
 form textarea,
-form button {
+form button,
+select {
   grid-column: 2; /* Place inputs, textareas, and buttons in the second column */
   padding: 0.5rem; /* Add padding inside the form controls */
   font: inherit; /* Ensure consistent font with the rest of the page */
@@ -77,8 +91,8 @@ form button {
   display: grid; /* Make each article a grid container */
   grid-template-rows: subgrid; /* Use the parent grid's rows */
   grid-row: span 3; /* Make each article span 3 rows */
-  background-color: #f8f9fa; /* Light background for each article */
-  border: 1px solid #ddd; /* Subtle border around each article */
+  background-color: color-mix(in oklch, canvas, var(--color-accent) 5%);
+  border: 1px solid color-mix(in oklch, canvastext 20%, canvas);
   border-radius: 5px; /* Rounded corners */
   padding: 1em; /* Add padding inside each article */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -98,7 +112,7 @@ form button {
 
 .projects p {
   font-size: 1em; /* Default font size for paragraphs */
-  color: #555; /* Slightly muted text color */
+  color: color-mix(in oklch, canvastext 70%, canvas);
 }
 
 h1 {
