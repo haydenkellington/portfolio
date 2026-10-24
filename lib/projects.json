@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Expected Run Value Pitch Recommender",
+    "year": 2026,
+    "url": "https://eclipsepitchtunneling.vercel.app",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "An interactive baseball analytics project that recommends pitches using game count, base and out state, batter handedness, previous pitch, and the available pitch arsenal. It combines Statcast data with a reinforcement learning model and compares options by expected run value, whiff rate, MLB usage, and sample size. This project overlaps with my Eclipse Analytics baseball work and its pitch tunneling project website."
+  },
+  {
+    "title": "Fall '25 MLB A.B.S Project Slides",
+    "year": 2025,
+    "url": "https://docs.google.com/presentation/d/1_V2DKwBplMU2oK5MCmghX2-ijk4vt8qUczx_v8JozuY/edit?usp=sharing&usp=embed_facebook",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Slides for the Fall 2025 MLB A.B.S. project, linked from my Eclipse Analytics Research Analyst experience on LinkedIn."
+  },
+  {
+    "title": "Eclipse Analytics Football Project",
+    "year": 2026,
+    "url": "https://www.linkedin.com/in/haydenkellington/overlay/Position/2848960004/treasury/?profileId=ACoAAFUBjKQBUGnqSkwxkVO4H9vmZjlBIu8PwNs",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "The Winter '26 4th Down EPA Project writeup from my Eclipse Analytics Research Analyst experience on LinkedIn. It analyzes how defensive pass prevention relates to 4th-down EPA and reports a consistent null finding across the tested analyses."
+  },
+  {
+    "title": "Spotify Data Analysis and Prediction",
+    "year": 2026,
+    "url": "https://haydenkellington.github.io/Spotify-Data-Analysis-and-Prediction/",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A data science project exploring Spotify listening and track data through analysis and predictive modeling. The repository contains the project work and analysis."
+  },
+  {
+    "title": "Eclipse Analytics Basketball Project",
+    "year": 2026,
+    "url": "https://github.com/haydenkellington/EclipseBasketballFall26",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A Fall 2026 Eclipse Analytics project focused on basketball data. The repository is the project workspace for analyzing the sport with a data science approach."
+  },
+  {
+    "title": "Data Science Portfolio Website",
+    "year": 2026,
+    "url": "https://github.com/haydenkellington/portfolio",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A portfolio website for presenting my projects and data science work. Built as part of the DSC 106 web development and visualization coursework."
+  },
+  {
+    "title": "Class Assignment Placeholder 1",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+  },
+  {
+    "title": "Class Assignment Placeholder 2",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Placeholder for another class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+  },
+  {
+    "title": "Class Assignment Placeholder 3",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+  },
+  {
+    "title": "Class Assignment Placeholder 4",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+  },
+  {
+    "title": "Class Assignment Placeholder 5",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+  },
+  {
+    "title": "Class Assignment Placeholder 6",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+  },
+  {
+    "title": "Class Assignment Placeholder 7",
+    "year": 2023,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+  }
+]
