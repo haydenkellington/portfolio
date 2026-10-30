@@ -80,6 +80,142 @@ form button {
   justify-self: center; /* Center the button horizontally */
 }
 
+.projects-summary {
+  --selected-color: #7b2cbf;
+  margin-block: 1.5em 2em;
+}
+
+.projects-summary h2 {
+  margin-bottom: 0;
+}
+
+.projects-summary-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25em;
+  flex-wrap: wrap;
+}
+
+.project-search {
+  display: grid;
+  gap: 0.4em;
+  max-width: 38em;
+  margin-block: 1.5em;
+}
+
+.searchBar {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65em 0.75em;
+  color: inherit;
+  background: canvas;
+  border: 1px solid color-mix(in oklch, canvastext 25%, canvas);
+  border-radius: 5px;
+  font: inherit;
+}
+
+.search-status,
+.empty-state {
+  margin: 0;
+  color: color-mix(in oklch, canvastext 65%, canvas);
+}
+
+#projects-pie-plot {
+  display: block;
+  width: min(100%, 20em);
+  margin-block: 1em;
+  overflow: visible;
+}
+
+#projects-pie-plot .slice-label {
+  fill: white;
+  font: 600 6px/1 system-ui, sans-serif;
+}
+
+.projects-summary .legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.75em;
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+  border: 1px solid color-mix(in oklch, canvastext 20%, canvas);
+  border-radius: 5px;
+}
+
+.legend-item {
+  min-width: 9em;
+}
+
+.legend-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+  padding: 0.35em 0.45em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.legend-item.selected .legend-button {
+  border-color: var(--selected-color);
+  background: color-mix(in oklch, var(--selected-color) 12%, canvas);
+  font-weight: 600;
+}
+
+.legend-item.selected .swatch {
+  background: var(--selected-color);
+}
+
+.clear-year-filter {
+  justify-self: start;
+  padding: 0.35em 0.65em;
+  border: 1px solid color-mix(in oklch, canvastext 25%, canvas);
+  border-radius: 4px;
+  background: canvas;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.swatch {
+  display: inline-block;
+  width: 0.9em;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color);
+}
+
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: opacity 300ms, fill 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+#projects-pie-plot path.selected {
+  fill: var(--selected-color, #7b2cbf);
+}
+
+#projects-pie-plot .slice-label {
+  pointer-events: none;
+}
+
+#projects-pie-plot path:focus-visible,
+.legend-button:focus-visible {
+  outline: 3px solid var(--selected-color, #7b2cbf);
+  outline-offset: 3px;
+}
+
 .projects {
   display: grid; /* Enable CSS Grid for the projects container */
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive grid */
@@ -90,7 +226,7 @@ form button {
 .projects article {
   display: grid; /* Make each article a grid container */
   grid-template-rows: subgrid; /* Use the parent grid's rows */
-  grid-row: span 3; /* Make each article span 3 rows */
+  grid-row: span 4; /* Make each article span 4 rows */
   background-color: color-mix(in oklch, canvas, var(--color-accent) 5%);
   border: 1px solid color-mix(in oklch, canvastext 20%, canvas);
   border-radius: 5px; /* Rounded corners */
@@ -113,6 +249,13 @@ form button {
 .projects p {
   font-size: 1em; /* Default font size for paragraphs */
   color: color-mix(in oklch, canvastext 70%, canvas);
+}
+
+.projects .project-year {
+  margin: 0;
+  font: inherit;
+  font-style: italic;
+  color: color-mix(in oklch, canvastext 55%, canvas);
 }
 
 h1 {

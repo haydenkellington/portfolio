@@ -10,6 +10,30 @@
 </head>
 <body>
     <h1 class="projects-title">Projects</h1>
+    <section class="projects-summary" aria-labelledby="projects-summary-title">
+        <h2 id="projects-summary-title">Projects by year</h2>
+        <div class="projects-summary-content">
+            <svg id="projects-pie-plot" viewBox="-50 -50 100 100" role="group" aria-labelledby="projects-pie-title projects-pie-description">
+                <title id="projects-pie-title">Projects by year</title>
+                <desc id="projects-pie-description"></desc>
+            </svg>
+            <ul class="legend" aria-label="Project counts by year"></ul>
+        </div>
+    </section>
+    <div class="project-search">
+        <label for="project-search">Search projects</label>
+        <input
+            class="searchBar"
+            id="project-search"
+            type="search"
+            aria-label="Search projects"
+            placeholder="🔍 Search projects…"
+            autocomplete="off"
+        >
+        <p class="search-status" aria-live="polite"></p>
+        <button class="clear-year-filter" type="button" hidden>Clear year filter</button>
+        <p class="empty-state" hidden>No projects match your search.</p>
+    </div>
     <div class="projects">
     </div>
 </body>
