@@ -272,3 +272,34 @@ h2, h3, h4, h5, h6 {
 h2 {
   font-size: 1.5em; /* Slightly larger font size for subheadings */
 }
+
+/* Lab 6: Meta page */
+.meta-note { color: color-mix(in oklch, canvastext 70%, canvas); max-width: 75ch; }
+#stats .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(9em, 1fr)); gap: .75rem; margin-block: 1.25rem 2rem; }
+.stats .stat { background: color-mix(in oklch, canvas, var(--color-accent) 7%); border: 1px solid color-mix(in oklch, canvastext 18%, canvas); border-radius: 5px; padding: .8rem; }
+.stats dt { font-size: .82em; color: color-mix(in oklch, canvastext 70%, canvas); }
+.stats dd { margin: .2rem 0 0; font-size: 1.5em; font-weight: 650; overflow-wrap: anywhere; }
+#chart svg { display: block; width: 100%; height: auto; overflow: visible; margin-block: 1.5rem; }
+.gridlines line { stroke: color-mix(in oklch, canvastext 16%, canvas); }
+.gridlines path { display: none; }
+.axis text { fill: canvastext; font: 13px system-ui, sans-serif; }
+.axis path, .axis line { stroke: color-mix(in oklch, canvastext 45%, canvas); }
+.axis-label { fill: canvastext; font: 14px system-ui, sans-serif; }
+.dots circle { fill: #5687a7; fill-opacity: .7; stroke: canvas; stroke-width: 1; transition: fill-opacity 150ms; cursor: pointer; }
+.dots circle:hover, .dots circle:focus { fill-opacity: 1; stroke: canvastext; outline: none; }
+.dots circle.selected { fill: #d34d62; fill-opacity: .9; }
+.brush .selection { fill: #d34d62; fill-opacity: .12; stroke: #9d2c40; stroke-dasharray: 5 3; }
+.info { display: grid; grid-template-columns: auto 1fr; gap: .3rem .8rem; }
+.info dt { color: color-mix(in oklch, canvastext 65%, canvas); }
+.info dd { margin: 0; }
+.tooltip { position: fixed; z-index: 10; margin: 0; padding: .8rem 1rem; max-width: min(24rem, calc(100vw - 1rem)); background: canvas; color: canvastext; border: 1px solid color-mix(in oklch, canvastext 20%, canvas); border-radius: 6px; box-shadow: 0 4px 18px #0003; font-size: .9rem; }
+.tooltip[hidden] { display: none; }
+#clear-selection { font: inherit; padding: .4rem .7rem; cursor: pointer; }
+.language-breakdown { display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; }
+.language-breakdown dd { margin: 0; }
+.meta-error { color: #bd313b; }
+@media(max-width: 600px) { body:has(#chart) nav { flex-wrap: wrap; } #chart svg { min-height: 260px; } }
+/* Keep the existing theme control clear of the extra navigation link on this page. */
+body:has(#chart) .color-scheme { position: static; display: block; text-align: right; margin-block: .5rem; }
+@media(max-width: 600px) { body:has(#chart) nav a { flex: 1 1 28%; } }
+@media(max-width: 600px) { .language-breakdown { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }

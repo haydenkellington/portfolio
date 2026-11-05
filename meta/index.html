@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta | Hayden Kellington</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="../global.js"></script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Meta</h1>
+    <p>An exploration of the code and commit history behind this portfolio.</p>
+    <p class="meta-note">Based on Git blame for lines in the analyzed files. It includes commits that last changed lines still present, not every commit or every line originally edited. Newly added, untracked files are not included until committed and the data is refreshed.</p>
+    <h2>Codebase at a glance</h2>
+    <div id="stats" aria-live="polite"><p>Loading code statistics…</p></div>
+    <section aria-labelledby="chart-title">
+      <h2 id="chart-title">Commits by time of day</h2>
+      <p class="meta-note">Each circle represents a commit. Position shows its date and recorded local time; area represents the number of current lines attributed to it. Hover or focus a circle for details, and drag across the chart to select commits.</p>
+      <div id="chart"></div>
+      <button id="clear-selection" type="button" disabled>Clear selection</button>
+      <p id="selection-count" aria-live="polite">No commits selected</p>
+      <h3>Languages in selected commits</h3>
+      <dl id="language-breakdown" class="language-breakdown"><dt>Select commits in the chart to see their language breakdown.</dt></dl>
+    </section>
+    <p id="data-error" class="meta-error" hidden></p>
+  </main>
+  <dl id="commit-tooltip" class="info tooltip" hidden>
+    <dt>Commit</dt><dd><a id="commit-link" target="_blank" rel="noopener noreferrer"></a></dd>
+    <dt>Date</dt><dd id="commit-date"></dd>
+    <dt>Time</dt><dd id="commit-time"></dd>
+    <dt>Author</dt><dd id="commit-author"></dd>
+    <dt>Current lines</dt><dd id="commit-lines"></dd>
+  </dl>
+</body>
+</html>
