@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching",
+    "year": 2026,
+    "url": "https://haydenkellington.github.io/bikewatching/",
+    "image": "images/bikewatching.png",
+    "description": "An interactive map exploring bike lanes and Bluebikes station traffic in Boston and Cambridge, with a time filter for arrivals and departures."
+  },
+  {
     "title": "Expected Run Value Pitch Recommender",
     "year": 2024,
     "url": "https://eclipsepitchtunneling.vercel.app",
@@ -45,42 +52,49 @@
     "title": "Class Assignment Placeholder 1",
     "year": 2024,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise.",
+    "url": null
   },
   {
     "title": "Class Assignment Placeholder 2",
     "year": 2026,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Placeholder for another class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+    "description": "Placeholder for another class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise.",
+    "url": null
   },
   {
     "title": "Class Assignment Placeholder 3",
     "year": 2026,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise.",
+    "url": null
   },
   {
     "title": "Class Assignment Placeholder 4",
     "year": 2024,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise.",
+    "url": null
   },
   {
     "title": "Class Assignment Placeholder 5",
     "year": 2025,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise.",
+    "url": null
   },
   {
     "title": "Class Assignment Placeholder 6",
     "year": 2024,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise.",
+    "url": null
   },
   {
     "title": "Class Assignment Placeholder 7",
     "year": 2024,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise."
+    "description": "Placeholder for a class project. Replace this entry with the assignment title, a short description of the work, and a project image. The year is a sample value for the visualization exercise.",
+    "url": null
   }
 ]
