@@ -285,7 +285,7 @@ h2 {
 .axis text { fill: canvastext; font: 13px system-ui, sans-serif; }
 .axis path, .axis line { stroke: color-mix(in oklch, canvastext 45%, canvas); }
 .axis-label { fill: canvastext; font: 14px system-ui, sans-serif; }
-.dots circle { fill: #5687a7; fill-opacity: .7; stroke: canvas; stroke-width: 1; transition: fill-opacity 150ms; cursor: pointer; }
+.dots circle { fill: #5687a7; fill-opacity: .7; stroke: canvas; stroke-width: 1; transition: fill-opacity 150ms, cx 200ms, cy 200ms, r 200ms; cursor: pointer; @starting-style { r: 0; } }
 .dots circle:hover, .dots circle:focus { fill-opacity: 1; stroke: canvastext; outline: none; }
 .dots circle.selected { fill: #d34d62; fill-opacity: .9; }
 .brush .selection { fill: #d34d62; fill-opacity: .12; stroke: #9d2c40; stroke-dasharray: 5 3; }
@@ -303,3 +303,22 @@ h2 {
 body:has(#chart) .color-scheme { position: static; display: block; text-align: right; margin-block: .5rem; }
 @media(max-width: 600px) { body:has(#chart) nav a { flex: 1 1 28%; } }
 @media(max-width: 600px) { .language-breakdown { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+.commit-filter label { display: flex; align-items: baseline; flex-wrap: wrap; gap: 1rem; }
+.commit-filter input { flex: 1; }
+.commit-filter time { margin-left: auto; }
+#scrolly-1 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.25fr); gap: 1.5rem; align-items: start; }
+#scatter-story .step { min-height: 45vh; visibility: hidden; }
+#scatter-story .step.is-active { visibility: visible; }
+#scatter-plot { position: sticky; top: 1rem; min-width: 0; }
+#scatter-plot #chart svg { margin-top: 0; }
+@media (max-width: 600px) {
+  #scrolly-1 { grid-template-columns: minmax(0, 1fr); }
+  #scatter-plot { position: static; }
+}
+#files { display: grid; grid-template-columns: 1fr 4fr; gap: 1rem; }
+#files > div { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; }
+#files dt { grid-column: 1; overflow-wrap: anywhere; }
+#files dt small { display: block; opacity: .7; }
+#files dd { grid-column: 2; display: flex; flex-wrap: wrap; align-items: start; align-content: start; gap: .15em; padding-top: .6em; margin-left: 0; }
+.loc { display: flex; width: .5em; aspect-ratio: 1; background: var(--color); border-radius: 50%; }

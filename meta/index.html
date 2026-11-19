@@ -14,22 +14,35 @@
     <p>An exploration of the code and commit history behind this portfolio.</p>
     <p class="meta-note">Based on Git blame for lines in the analyzed files. It includes commits that last changed lines still present, not every commit or every line originally edited. Newly added, untracked files are not included until committed and the data is refreshed.</p>
     <h2>Codebase at a glance</h2>
+    <div class="commit-filter">
+      <label for="commit-progress">
+        Show commits until:
+        <input type="range" id="commit-progress" min="0" max="100" value="100" step="any">
+        <time id="commit-time"></time>
+      </label>
+    </div>
     <div id="stats" aria-live="polite"><p>Loading code statistics…</p></div>
+    <dl id="files"></dl>
     <section aria-labelledby="chart-title">
       <h2 id="chart-title">Commits by time of day</h2>
-      <p class="meta-note">Each circle represents a commit. Position shows its date and recorded local time; area represents the number of current lines attributed to it. Hover or focus a circle for details, and drag across the chart to select commits.</p>
-      <div id="chart"></div>
-      <button id="clear-selection" type="button" disabled>Clear selection</button>
-      <p id="selection-count" aria-live="polite">No commits selected</p>
-      <h3>Languages in selected commits</h3>
-      <dl id="language-breakdown" class="language-breakdown"><dt>Select commits in the chart to see their language breakdown.</dt></dl>
+      <p class="meta-note">Each circle represents a commit. Position shows its date and recorded local time; area represents the number of current lines attributed to it. Hover or focus a circle for details, drag across the chart to select commits, and scroll down the page to explore the timeline.</p>
+      <div id="scrolly-1">
+        <div id="scatter-story"></div>
+        <div id="scatter-plot">
+          <div id="chart"></div>
+          <button id="clear-selection" type="button" disabled>Clear selection</button>
+          <p id="selection-count" aria-live="polite">No commits selected</p>
+          <h3>Languages in selected commits</h3>
+          <dl id="language-breakdown" class="language-breakdown"><dt>Select commits in the chart to see their language breakdown.</dt></dl>
+        </div>
+      </div>
     </section>
     <p id="data-error" class="meta-error" hidden></p>
   </main>
   <dl id="commit-tooltip" class="info tooltip" hidden>
     <dt>Commit</dt><dd><a id="commit-link" target="_blank" rel="noopener noreferrer"></a></dd>
     <dt>Date</dt><dd id="commit-date"></dd>
-    <dt>Time</dt><dd id="commit-time"></dd>
+    <dt>Time</dt><dd id="tooltip-commit-time"></dd>
     <dt>Author</dt><dd id="commit-author"></dd>
     <dt>Current lines</dt><dd id="commit-lines"></dd>
   </dl>
